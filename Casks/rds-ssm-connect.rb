@@ -1,8 +1,16 @@
 cask "rds-ssm-connect" do
   version "1.7.3"
-  sha256 "fc6ac505a903db9ab61e6dc436d884c8667721e8b44f1c7d01cedc8d41b46aba"
 
-  url "https://github.com/yarka-guru/connection_app/releases/download/v#{version}/RDS.SSM.Connect_#{version}_aarch64.dmg"
+  on_arm do
+    sha256 "8addc93625006ebbfa9734f8cf2425f61ece458056f66a0302b31995d6b69206"
+    url "https://github.com/yarka-guru/connection_app/releases/download/v#{version}/RDS.SSM.Connect_#{version}_aarch64.dmg"
+  end
+
+  on_intel do
+    sha256 "da7a0559faedd4c7956d242f2021d6a112b66f623a303f527670bf45bcceb674"
+    url "https://github.com/yarka-guru/connection_app/releases/download/v#{version}/RDS.SSM.Connect_#{version}_x64.dmg"
+  end
+
   name "RDS SSM Connect"
   desc "Secure database tunneling via AWS SSM"
   homepage "https://github.com/yarka-guru/connection_app"
