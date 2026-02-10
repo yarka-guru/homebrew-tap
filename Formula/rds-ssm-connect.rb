@@ -16,21 +16,25 @@ class RdsSsmConnect < Formula
     end
   end
 
+  depends_on "awscli"
+  depends_on "aws-vault"
+
   def install
-    # Extract .deb package
     system "ar", "x", cached_download
     mkdir_p "extract"
     system "tar", "xf", Dir["data.tar.*"].first, "-C", "extract"
 
-    # Install binary
     bin.install Dir["extract/usr/bin/*"]
-
-    # Install desktop file and icons if present
     share.install Dir["extract/usr/share/*"] if Dir.exist?("extract/usr/share")
   end
 
   def caveats
     <<~EOS
+      You also need the AWS Session Manager Plugin:
+        https://docs.aws.amazon.com/systems-manager/latest/userguide/session-manager-working-with-install-plugin.html
+
+      Ensure your AWS profiles are configured in ~/.aws/config
+
       On macOS, install the desktop app instead:
         brew install --cask rds-ssm-connect
     EOS
