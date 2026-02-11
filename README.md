@@ -18,17 +18,17 @@ brew tap yarka-guru/tap
 brew install rds-ssm-connect
 ```
 
-Or install the `.deb` package directly:
+## Direct Downloads
 
-```bash
-# x86_64
-curl -LO https://github.com/yarka-guru/connection_app/releases/latest/download/RDS.SSM.Connect_1.7.3_amd64.deb
-sudo dpkg -i RDS.SSM.Connect_1.7.3_amd64.deb
+Download installers directly from [GitHub Releases](https://github.com/yarka-guru/connection_app/releases/latest):
 
-# ARM64
-curl -LO https://github.com/yarka-guru/connection_app/releases/latest/download/RDS.SSM.Connect_1.7.3_aarch64.deb
-sudo dpkg -i RDS.SSM.Connect_1.7.3_aarch64.deb
-```
+| Platform | Format |
+|----------|--------|
+| macOS (Apple Silicon) | `.dmg` |
+| macOS (Intel) | `.dmg` |
+| Linux (x86_64) | `.deb`, `.rpm`, `.AppImage` |
+| Linux (ARM64) | `.deb`, `.rpm`, `.AppImage` |
+| Windows | `.exe` (NSIS), `.msi` |
 
 ## Updating
 
