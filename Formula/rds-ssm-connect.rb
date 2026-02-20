@@ -1,17 +1,17 @@
 class RdsSsmConnect < Formula
   desc "Secure database tunneling via AWS SSM"
   homepage "https://github.com/yarka-guru/connection_app"
-  version "1.8.2"
+  version "1.8.3"
   license "MIT"
 
   on_linux do
     on_intel do
       url "https://github.com/yarka-guru/connection_app/releases/download/v#{version}/RDS.SSM.Connect_#{version}_amd64.deb"
-      sha256 "56fe86a3002aec6a0e4edd8c70b26ff63d4a26072fbb65034188776859d32a14"
+      sha256 "590a430aac9e9df0308c703aebb7ef4e236cacd6f3747c7efef2e2958077d9a2"
     end
     on_arm do
       url "https://github.com/yarka-guru/connection_app/releases/download/v#{version}/RDS.SSM.Connect_#{version}_arm64.deb"
-      sha256 "c5b27697b8b6ffb5ec0cd9e4a73f25c81085052a4d28d60e36019e7971a45f9e"
+      sha256 "868081c8a712d3b944b3df659a1d1cf8d8919df916a90b8e3572d0bb0634f53a"
     end
   end
 
