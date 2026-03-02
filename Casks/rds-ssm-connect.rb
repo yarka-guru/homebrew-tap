@@ -16,15 +16,10 @@ cask "rds-ssm-connect" do
   homepage "https://github.com/yarka-guru/connection_app"
 
   depends_on macos: ">= :monterey"
-  depends_on formula: "aws-vault"
-  depends_on formula: "awscli"
 
   app "RDS SSM Connect.app"
 
   caveats <<~EOS
-    You also need the AWS Session Manager Plugin:
-      brew install --cask session-manager-plugin
-
     Ensure your AWS profiles are configured in ~/.aws/config
   EOS
 

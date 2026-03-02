@@ -15,9 +15,6 @@ class RdsSsmConnect < Formula
     end
   end
 
-  depends_on "awscli"
-  depends_on "aws-vault"
-
   def install
     system "ar", "x", cached_download
     mkdir_p "extract"
@@ -29,9 +26,6 @@ class RdsSsmConnect < Formula
 
   def caveats
     <<~EOS
-      You also need the AWS Session Manager Plugin:
-        https://docs.aws.amazon.com/systems-manager/latest/userguide/session-manager-working-with-install-plugin.html
-
       Ensure your AWS profiles are configured in ~/.aws/config
 
       On macOS, install the desktop app instead:
