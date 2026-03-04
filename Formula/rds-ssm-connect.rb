@@ -1,17 +1,17 @@
 class RdsSsmConnect < Formula
   desc "Secure database tunneling via AWS SSM"
   homepage "https://github.com/yarka-guru/connection_app"
-  version "2.1.6"
+  version "2.1.7"
   license "MIT"
 
   on_linux do
     on_intel do
       url "https://github.com/yarka-guru/connection_app/releases/download/v#{version}/RDS.SSM.Connect_#{version}_amd64.deb"
-      sha256 "59194324c5bafb338913ff7610ab6b86e9b3fc0531f48073fef16a631c39742a"
+      sha256 "e72c053e0dc96112aa3e7d4cdcce660522098294cd40ae9cf952b58d6a5e734f"
     end
     on_arm do
       url "https://github.com/yarka-guru/connection_app/releases/download/v#{version}/RDS.SSM.Connect_#{version}_arm64.deb"
-      sha256 "36979b0569a11a2645f8c58ef840a4c7ef07f22b551a729b46ffd3b7075ca3d2"
+      sha256 "3bf3314d42d4df5666c91341d59c162ab79788b3c75413a8938779a1cdd21e9d"
     end
   end
 
@@ -28,7 +28,9 @@ class RdsSsmConnect < Formula
     # Generate .desktop file with correct Homebrew paths
     desktop_dir = Pathname.new(File.expand_path("~/.local/share/applications"))
     desktop_dir.mkpath
-    (desktop_dir/"rds-ssm-connect.desktop").write <<~DESKTOP
+    desktop_file = desktop_dir/"rds-ssm-connect.desktop"
+    desktop_file.unlink if desktop_file.exist?
+    desktop_file.write <<~DESKTOP
       [Desktop Entry]
       Name=RDS SSM Connect
       Comment=Secure database tunneling via AWS SSM
@@ -39,14 +41,16 @@ class RdsSsmConnect < Formula
       Terminal=false
     DESKTOP
 
-    # Link icons to user icon directory
+    # Copy icons to user icon directory
     icon_src = share/"icons/hicolor"
     if icon_src.exist?
       icon_dest = Pathname.new(File.expand_path("~/.local/share/icons/hicolor"))
       icon_src.glob("*/apps/*.png").each do |icon|
         size_dir = icon_dest/icon.parent.parent.basename/"apps"
         size_dir.mkpath
-        cp icon, size_dir/icon.basename
+        dest_icon = size_dir/icon.basename
+        dest_icon.unlink if dest_icon.exist?
+        cp icon, dest_icon
       end
     end
   end
