@@ -1,13 +1,13 @@
 cask "rds-ssm-connect" do
-  version "2.1.11"
+  version "2.1.12"
 
   on_arm do
-    sha256 "a4e2a736fbd308c1deeeb4186a0597080f8982c0573c4470d20d52ba12a9f553"
+    sha256 "53c8ef01b222a9846e87ff5a6692f80f05cd63fb43a26ab5f64e380c96d51b64"
     url "https://github.com/yarka-guru/connection_app/releases/download/v#{version}/RDS.SSM.Connect_#{version}_aarch64.dmg"
   end
 
   on_intel do
-    sha256 "2fdfb2aaf00a191a663dde0859cb13f7c2d3ef4d73dcc2566775b2882023d569"
+    sha256 "ec46574322e47ab5d2aa071190a84737856108671770d3130e2a102dd8795ab7"
     url "https://github.com/yarka-guru/connection_app/releases/download/v#{version}/RDS.SSM.Connect_#{version}_x64.dmg"
   end
 
