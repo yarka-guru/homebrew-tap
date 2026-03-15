@@ -1,6 +1,6 @@
-# Homebrew Tap for RDS SSM Connect
+# Homebrew Tap for ConnectionApp
 
-Secure database tunneling via AWS SSM.
+Secure tunneling via AWS SSM.
 
 ## Installation
 
@@ -8,14 +8,14 @@ Secure database tunneling via AWS SSM.
 
 ```bash
 brew tap yarka-guru/tap
-brew install --cask rds-ssm-connect
+brew install --cask connection-app
 ```
 
 ### Linux (x86_64 / ARM64)
 
 ```bash
 brew tap yarka-guru/tap
-brew install rds-ssm-connect
+brew install connection-app
 ```
 
 ## Direct Downloads
@@ -34,6 +34,6 @@ Download installers directly from [GitHub Releases](https://github.com/yarka-gur
 
 ```bash
 brew update
-brew upgrade --cask rds-ssm-connect  # macOS
-brew upgrade rds-ssm-connect          # Linux
+brew upgrade --cask connection-app  # macOS
+brew upgrade connection-app          # Linux
 ```
