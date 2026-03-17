@@ -7,11 +7,11 @@ class ConnectionApp < Formula
   on_linux do
     on_intel do
       url "https://github.com/yarka-guru/connection_app/releases/download/v#{version}/ConnectionApp_#{version}_amd64.deb"
-      sha256 "e1b09f370539e9ea32d1a38d4067d473ba05414ec1ddac05db3af22190fcde6a"
+      sha256 "3ba19602b58021c998c6a4343e72b73d4736053f0ceffbc9a6c293648eeb639f"
     end
     on_arm do
       url "https://github.com/yarka-guru/connection_app/releases/download/v#{version}/ConnectionApp_#{version}_arm64.deb"
-      sha256 "f5b683e71a9c403610be2a584dbf9635719f29a2ad6da20d45089a103b9ec707"
+      sha256 "b1aadca79ca0d9939337fb926dbe1eb92217dd8db48db7e916cc23405270634e"
     end
   end
 
