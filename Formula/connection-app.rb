@@ -1,17 +1,17 @@
 class ConnectionApp < Formula
   desc "Secure tunneling via AWS SSM"
   homepage "https://github.com/yarka-guru/connection_app"
-  version "3.4.4"
+  version "3.4.5"
   license "MIT"
 
   on_linux do
     on_intel do
       url "https://github.com/yarka-guru/connection_app/releases/download/v#{version}/ConnectionApp_#{version}_amd64.deb"
-      sha256 "7cc57877481f18a3f75b8cbf75c2517695c57923c5143c1a7678bf5a7537b97f"
+      sha256 "27ee96c8ed120485f67b17c6847c067ff773a3a0b07adf51aad2a5111eb23d79"
     end
     on_arm do
       url "https://github.com/yarka-guru/connection_app/releases/download/v#{version}/ConnectionApp_#{version}_arm64.deb"
-      sha256 "66c837a0d5992bc8086339750245ef4aa53a20923f42163c53efc7086bf87213"
+      sha256 "eb6bcf5c333f066836e1ac3043f9a0950673d6ad52ce6fe7d72d0381b3e8d463"
     end
   end
 
