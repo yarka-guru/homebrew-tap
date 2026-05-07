@@ -4,18 +4,29 @@ Secure tunneling via AWS SSM.
 
 ## Installation
 
-### macOS (Desktop App)
+Each install command brings the GUI app **and** the `connection-app-cli`
+companion binary (the cask depends on the CLI formula on macOS, the
+Linux formula does the same).
+
+### macOS (Desktop App + CLI)
 
 ```bash
 brew tap yarka-guru/tap
 brew install --cask connection-app
 ```
 
-### Linux (x86_64 / ARM64)
+### Linux (x86_64 / ARM64) — GUI + CLI
 
 ```bash
 brew tap yarka-guru/tap
 brew install connection-app
+```
+
+### CLI only (any platform)
+
+```bash
+brew tap yarka-guru/tap
+brew install connection-app-cli
 ```
 
 ## Direct Downloads
