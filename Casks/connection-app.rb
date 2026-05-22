@@ -1,13 +1,13 @@
 cask "connection-app" do
-  version "3.6.1"
+  version "3.6.2"
 
   on_arm do
-    sha256 "0d1a0faf7907c869aaa8ca91b21e516eb6ecc8f7ed0cba610691d8b8609449ea"
+    sha256 "036d61e3c2f31c6780e37b21454501b3006df9a350dc07e6bc0b33cbe1b15042"
     url "https://github.com/yarka-guru/connection_app/releases/download/v#{version}/ConnectionApp_#{version}_aarch64.dmg"
   end
 
   on_intel do
-    sha256 "514a463ee96b5cfebc00886307a66a13326b7f7b76bb52e7f1d2c2832529b9a1"
+    sha256 "0c8c21d2d80e876f94e283eb4f85a5cddc1698b4d572a902b4f170faa69483d9"
     url "https://github.com/yarka-guru/connection_app/releases/download/v#{version}/ConnectionApp_#{version}_x64.dmg"
   end
 
