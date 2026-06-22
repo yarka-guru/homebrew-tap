@@ -15,7 +15,7 @@ cask "connection-app" do
   desc "Secure tunneling via AWS SSM"
   homepage "https://github.com/yarka-guru/connection_app"
 
-  depends_on macos: ">= :monterey"
+  depends_on macos: :monterey
   depends_on formula: "yarka-guru/tap/connection-app-cli"
 
   app "ConnectionApp.app"
