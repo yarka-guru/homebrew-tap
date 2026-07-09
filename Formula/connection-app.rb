@@ -1,7 +1,7 @@
 class ConnectionApp < Formula
   desc "Secure tunneling via AWS SSM"
   homepage "https://github.com/yarka-guru/connection_app"
-  version "3.7.3"
+  version "3.7.4"
   license "MIT"
 
   depends_on "yarka-guru/tap/connection-app-cli"

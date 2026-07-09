@@ -1,17 +1,17 @@
 class ConnectionAppCli < Formula
   desc "ConnectionApp CLI — secure tunneling via AWS SSM"
   homepage "https://github.com/yarka-guru/connection_app"
-  version "3.7.3"
+  version "3.7.4"
   license "MIT"
 
   on_macos do
     on_arm do
       url "https://github.com/yarka-guru/connection_app/releases/download/v#{version}/connection-app-cli-aarch64-apple-darwin.tar.gz"
-      sha256 "9ecc0421cac8cbcb165bc776c975485c6e7e5f2398fbfe5c91a2957f9498a504"
+      sha256 "d0059b7d223915145d77aa2652058b0330b0412c4b62aefd62806709e2f59dec"
     end
     on_intel do
       url "https://github.com/yarka-guru/connection_app/releases/download/v#{version}/connection-app-cli-x86_64-apple-darwin.tar.gz"
-      sha256 "226aac4b29f6d76e411bcb1cdf0921ed09319477803db248730d0365ab5210e2"
+      sha256 "ad2ea6c7e31638fe13373d66bf40a751f704796ceabc5f6ebe189788ed52ed91"
     end
   end
 
