@@ -39,7 +39,6 @@ Download installers directly from [GitHub Releases](https://github.com/yarka-gur
 | macOS (Intel) | `.dmg` |
 | Linux (x86_64) | `.deb`, `.rpm`, `.AppImage` |
 | Linux (ARM64) | `.deb`, `.AppImage` |
-| Windows | `.exe` (NSIS), `.msi` |
 
 ## Updating
 
